@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #000000;
+  font-size: 14px;
+  padding: 0.5px 5px;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+}
+
+.head{
+  color: #000000;
+  font-size: 25px;
+  padding: 8px 12px;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="head">What is the Happiest Place on Earth?</div>
+  <img src="1.svg" style="width:100%">
+  <div class="text">After observing the map, we notice that Scandinavian countries have some of the highest happiness scores as seen by their dark green hue. We also notice that there are some countries missing which occured due to missing data in our dataset.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="head">Is there a Substantial Discrepancy in Happiness over the Various Regions?</div>
+  <img src="2.svg" style="width:100%">
+  <div class="text">By observing the bubble plot, we can notice that 'Western Europe' is by far the leader when it comes to happiness scores. We also notice that while most countries in 'Latin America' are relatively happy, there is one that is along side the 'Sub-Saharan Africa' countries as some of the least happy countries.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="head">What are some of the Happiest Countries in the World?</div>
+  <img src="3.svg" style="width:100%">
+  <div class="text">As we observed earlier, Scandinavian countries make up most of the top happiest countries with a surprising appearance from New Zealand at rank 9. Also notice that the difference bewtween rank 1 and rank 2 is greater than the difference between rank 2 and rank 10.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="head">How does the US compare to the Happiest Country in the World?</div>
+  <img src="4.svg" style="width:100%">
+  <div class="text">While many consider the US to be the 'best' country in the world, when compared to Finland we can see that having more money does not necessarily lead to happier people.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="head">How do Different Social Statistics affect Happiness Score?</div>
+  <img src="5.svg" style="width:100%">
+  <div class="text">While GDP per capita is a good statistic to measure how well off people in a country are, having a higher value for it does not necessarily imply that the people are happy. However, we can say that having a relatively high GDP per capita helps the overall happiness score of a country.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="6.svg" style="width:100%">
+  <div class="text">By observing the above plot, we notice that Finland has a relatively high life expectancy which implies the existence of a robust healthcare system. On the other hand, the US has a much lower life expectancy which is a result of the mismanaged health care system of the US. Based on this, having a higher life expectancy does impact the happiness of the people.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="7.svg" style="width:100%">
+  <div class="text">How corrupt the people think that their government is has a substantial impact on the quality of life in the country. Looking above, we can see a clear difference in the perception of two different governments and how having more trust in your government leads to a better overall quality of life which increases happiness.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="8.svg" style="width:100%">
+  <div class="text">How generous the people in a country are seems have a somewhat random distribution of values. The values themselves are the only ones that go into the negatives which makes it hard to ascertain the true meaning behind the data. However, we can also see that there is no strong relation to happiness based on this metric.</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="9.svg" style="width:100%">
+  <div class="text">Looking above, having more freedom to express yourself without being worried about being harmed for it has a substantial impact on the happiness of people. However, considering the US is the 'land of the free' their score is surprisingly low and its impact can be felt on the happiness score of the US.</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
